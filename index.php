@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Copatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LESA</title>
-    <script src="C:\wamp64\www\proyectoint - copia\js\lesa(beta).js"type="text/javascript"></script>
-    <link rel="stylesheet" href="C:\wamp64\www\proyectoint - copia\assets\css\diseno.css">
+    <script src="js\lesa(beta).js"type="text/javascript"></script>
+    <link rel="stylesheet" href="assets\css\diseno.css">
 </head>
 <body>
     
