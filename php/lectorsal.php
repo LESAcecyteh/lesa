@@ -24,7 +24,7 @@
       </div>
     </div>
   </div>
-  <audio id="audioScaner" src="C:\wamp64\www\proyectoint\js\lector_salida\sonido.mp3"></audio>
-  <script src="C:\wamp64\www\proyectoint\js\lector_salida\js\index.js"></script>
+  <audio id="audioScaner" src="js\lector_salida\sonido.mp3"></audio>
+  <script src="js\lector_salida\js\index.js"></script>
 </body>
 </html>
