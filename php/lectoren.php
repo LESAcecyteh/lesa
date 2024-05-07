@@ -24,8 +24,8 @@
       </div>
     </div>
   </div>
-  <audio id="audioScaner" src="C:\wamp64\www\proyectoint\js\lector_entrada\sonido.mp3"></audio>
-  <script src="C:\wamp64\www\proyectoint\js\lector_entrada\js\index.js"></script>
+  <audio id="audioScaner" src="js\lector_entrada\sonido.mp3"></audio>
+  <script src="js\lector_entrada\js\index.js"></script>
   <?php
             echo 'La fecha de hoy es: <b>' . date('Y/m/d') . '</b> y su dia es: <b>'.date('l').'</b>!';
         ?>
