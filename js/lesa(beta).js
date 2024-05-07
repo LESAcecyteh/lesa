@@ -11,15 +11,15 @@ function verificar() {
     }
 //SISTEMA DE ENTRADA    
 function entrada(){
-    location.href="php/lectoren.php";
+    location.href="lectoren.html";
 }
 //SISTEMA DE SALIDA
 function salida(){
-    location.href="php/lectorsal.php";
+    location.href="lectorsal.html";
 }
 //SISTEMA DE nueva base de datos 
 function registro(){
-    location.href="php/basedatos.php";
+    location.href="basedatos.html";
 }
 //ALUMNOS
 function verificarmatricula() {
