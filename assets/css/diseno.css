@@ -138,7 +138,7 @@ nav .icon-bars .line{
 }
 .imagen {
 
-  background-image: url('C:/wamp64/www/proyectoint/imagenes/06faf4dfe26484f67ed6bd47e1c2969e.jpg'); 
+  background-image: url('imagenes/06faf4dfe26484f67ed6bd47e1c2969e.jpg'); 
   
   background-size: cover; 
   background-position: center;
@@ -185,7 +185,7 @@ input[type="submit"] {
   text-align: center;
 }
 .vista {
-  background-image: url('C:/wamp64/www/proyectoint/imagenes/abstract-elegant-white-and-gray-background-abstract-white-pattern-squares-texture-vector.jpg'); 
+  background-image: url('imagenes/abstract-elegant-white-and-gray-background-abstract-white-pattern-squares-texture-vector.jpg'); 
   
   background-size: cover; 
   background-position: center;
