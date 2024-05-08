@@ -9,7 +9,7 @@ const canvas = canvasElement.getContext("2d");
 const btnScanQR = document.getElementById("btn-scan-qr");
 
 //lectura desactivada
-let scanning = false;
+let scanning = true;
 
 //funcion para encender la camara
 const encenderCamara = () => {
