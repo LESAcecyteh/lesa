@@ -1,0 +1,464 @@
+
+
+/*MENU DE INICIO*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav{
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-family: Bell MT;
+  padding: 0.5%;
+  height: 100px;
+  background-color: #1b4064;
+}
+/*cabecera*/
+nav .logo{
+   
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav .list{
+
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .list li{
+  list-style: none;
+}
+
+nav .list a{
+  display: block;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+
+
+}
+
+nav .list a:hover {
+  border-bottom:4px solid #675bf9;
+
+}
+
+#toggle{
+  position: absolute;
+  top: -100px;
+}
+
+nav .icon-bars{
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav .icon-bars .line{
+  width: 30px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+
+@media (max-width:768px) {
+  nav .logo{
+    float:none;
+    width: auto;
+    justify-content: center;
+  } 
+  
+  nav .list{
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top:100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+  }
+
+  nav .list a{
+    font-size: 20px;
+  }
+
+  nav :checked ~ .list{
+    bottom: 0;
+  }
+
+  nav .icon-bars{
+    display: block;
+  }
+}
+/*DISEÑO GENERAL*/
+@keyframes fadeIn{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+.fade-in{
+  animation: fadeIn 1s
+  ease
+}
+.imagen {
+
+  background-image: url('imagenes/REGISTRO.jpg'); 
+  
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+ 
+  font-family:Bell MT; 
+
+}
+h1{
+  text-align: center;
+  font-family: Bell MT;
+
+}
+h2 {
+  text-align: center;
+  font-family: Bell MT;
+}
+h3 {
+  text-align: center;
+  font-family:Bell MT;
+}
+.container img {
+  width: 100px; 
+  height: auto;
+  border-radius: 50%; 
+  
+}
+form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+
+  box-sizing: border-box;
+}
+.container {
+  text-align: center;
+}
+.vista {
+  background-image: url('imagenes/vistas.jpg'); 
+  
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+
+h1{
+    text-align: center;
+    font-family: Bell MT;
+  
+  }
+h2 {
+    text-align: center;
+    font-family: Bell MT;
+  }
+
+
+ 
+}
+.container2 img{
+ 
+  height: auto;
+  border-radius: 50%; 
+  width: 38%;
+ margin: 0 auto; 
+  display: flex; 
+  justify-content: center;
+ 
+ 
+}
+
+
+
+
+
+
+/* carrusel */
+
+/* Reset básico para garantizar que no haya márgenes/paddings inesperados */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+  width: 100%;
+  height: 500px;  /* Ajustado a una altura más razonable para demostración */
+  margin-bottom: 0; /* Elimina cualquier margen inferior */
+  overflow: hidden;
+  position: relative;
+}
+.caption {
+  position: absolute;
+  bottom: 82%; /* Ajusta esta propiedad para mover el texto hacia arriba o abajo */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Esto ayuda a que el texto se destaque más sobre fondos complejos */
+  z-index: 3; /* Asegúrate de que el z-index sea superior al de cualquier otro elemento dentro del slide */
+}
+
+
+.slides .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 1s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slides .slide.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+
+.inicio {
+  background-image: url('imagenes/R.jpg'); 
+  
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  margin-top: -5px; /* Ajuste fino para eliminar cualquier espacio si existe */
+}
+  
+
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(188, 187, 250, 0.5); /* Fondo semitransparente para legibilidad */
+  padding: 20px; /* Espacio interior del contenido */
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h1 {
+  font-size: 2.5em;
+  color: #0b138b;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.2em;
+  color: #305f11;
+  line-height: 1.6;
+  margin: 0;
+}
+/* imagen de logo */
+.logo img{
+ 
+  height: auto;
+  border-radius: 50%; 
+  width: 10%;
+ margin: 0 auto; 
+  display: block; 
+  justify-content: center;
+ 
+ 
+}
+/* botones */
+/* Estilos para el botón */
+button, input[type="button"] {/* Elimina el borde del botón */
+  border: none;/* Establece el relleno interno del botón */
+  padding: 8px 18px;/* Define el margen alrededor del botón */
+  margin: 10px;/* Cambia el cursor del mouse cuando pasa sobre el botón para indicar que es interactivo */
+  cursor: pointer;/* Establece el tamaño del texto en el botón */
+  font-size: 18px; /* Aplica esquinas redondeadas al botón */
+  border-radius: 8px; /* Define una transición suave para los cambios de color de fondo y transformación */
+  transition: background-color 0.3s, transform 0.2s;/* Establece el color de fondo del botón cuando está en su estado normal */
+  background-color: #8aa8bb;  /* Define el color del texto en el botón */
+  color: white;
+}
+/* Cambia el color de fondo del botón cuando el mouse se coloca sobre él */
+button:hover, input[type="button"]:hover {/* En este caso, el color de fondo del botón en el estado de hover es el mismo que el estado normal, por lo que no hay un cambio visual */
+  background-color: #0c96ec; 
+}
+
+
+/* ACCIONA SELLECCIONA ENTRADA O SALIDA*/
+
+.entsal {
+  background-image: url('F:/cuarto semestre proyecto/proyectoint/imagenes/abstract-elegant-white-and-gray-background-abstract-white-pattern-squares-texture-vector.jpg'); 
+
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.entsal h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0b0069;
+}
+
+.entsal form {
+  text-align: center;
+}
+
+/* Estilo para la página específica */
+.pagina-unico {
+  background-image: url('F:/cuarto semestre proyecto/proyectoint/imagenes/FONDOENTSAL.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+/* Estilo para la página ayuda */
+.pagina-ayuda {
+  font-family:Georgia;
+  background-image: url('F:/cuarto semestre proyecto/proyectoint/imagenes/ayuda.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  margin: 0;
+  color: #ab9b96;
+  display: flex;
+ 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+ 
+}
+.ayuda {
+ 
+    background: rgba(155, 182, 221, 0.8);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.486);
+    max-width: 600px;
+    width: 90%;
+    
+}
+
+.pagina-ayuda h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #759eB8;
+}
+.pagina-ayuda .content {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  background: #D8E1E9;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #7392B7;
+}
+.pagina-ayuda .contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.pagina-ayuda .contact-item {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background: #D8E1E9;
+  border-radius: 10px;
+  border-left: 5px solid #7392B7;
+}
+.pagina-ayuda .contact-item p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #7871AA;
+}
+.pagina-ayuda .contact-info a {
+  color: #ab9b96;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: block;
+  padding: 10px 0;
+  transition: color 0.3s;
+}
+.pagina-ayuda .contact-info a:hover {
+  color: #ab9b96;
+}
+.pagina-ayuda .social-media {
+  margin-top: 20px;
+}
+.pagina-ayuda .social-media a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #22c2eb;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+.pagina-ayuda .social-media a:hover {
+  color: #ab9b96;
+}
+/* Estilo para la página de lector */
+.pagina-lector {
+  background-image: url('F:/cuarto semestre proyecto/proyectoint/imagenes/lector.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+}
