@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="banco.css">
+    <title>Formulario de Datos Personales</title>
+</head>
+<body>
+    <form id="formulario" action="basedatos.php" method="post">   
+    <div class="formulario">
+            <div>
+                <label for="basedatos">Grado y Grupo</label>
+                <input type="text" id="basedatos" name="basedatos"><br>
+
+                <label for="num">Numero de alumnos:</label>
+                <input type="text" id="num" min="20" max="100"><br>
+                
+                <button onclick="ingresarAlumnos()">Ingresar Alumnos</button> <!-- Botón para generar etiquetas -->
+  
+                <div id="contenedor-etiquetas">
+  
+                </div> <!-- Contenedor donde se agregarán las etiquetas -->
+
+            </div>
+            <button type="submit" id="btn-guardar">Guardar</button>
+    </form>
+</body>
+</html>                                                                                                                                                                       
+<!--al html se le agregaron solamente 2 lineas mas de codigo, una al principo y otra al final-->
