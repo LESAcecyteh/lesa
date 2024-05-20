@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LESA</title>
+    <script src="js/lesa(beta).js" type="text/javascript"></script>
+    <link rel="stylesheet" href="assets/css/diseno.css">
+</head>
+<body>
+    <div class="inicio">
+    <br>
+    <br>
+    <br>
+    <br>
+    <nav>
+        <input type="checkbox" id="toggle">
+        <div class="logo">
+            Lector de Entrada y Salida de Alumnos
+        </div>
+        <ul class="list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="vista.html">Vista</a></li>
+        </ul>
+        <label for="toggle" class="icon-bars">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    <br>
+    <form id="formulario">
+    <div class="formulario">
+            <div>
+                <br>
+                <br>
+                <br>
+                <label for="nom_basedatos">Grado y Grupo</label>
+                <input type="text" id="nom_basedatos" name="nom_basedatos"><br>
+
+                <label for="numberInput">Numero de alumnos:</label>
+                <input type="number" id="numberInput" min="0">
+                
+    
+                <button onclick="generarAlumnos()">Generar Alumnos</button>
+
+                <div id="labelsContainer">
+                    <br>
+                </div>
+            </div>
+            <!-- Botones de borrar y guardar -->
+            <button type="button" onclick="guardarDatos()">Guardar Datos</button>
+      </div>
+          </form>    
+        <script>
+          document.getElementById('formulario').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+        });
+    </script>
+    </body>
+</html>
