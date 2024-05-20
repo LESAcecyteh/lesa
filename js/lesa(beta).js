@@ -92,23 +92,24 @@ function generarAlumnos() {
             const formData = new FormData(document.getElementById('formulario'));
             
             fetch('php/basedatos.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok ' + response.statusText);
-                }
-                return response.text();
-            })
-            .then(data => {
-                console.log('Success:', data);
-                alert('Datos guardados exitosamente');
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                alert('Error al guardar los datos');
-            });
+    method: 'POST',
+    body: formData
+})
+.then(response => {
+    if (response.ok) {
+        return response.text(); // Solo procede si la respuesta es "ok"
+    } else {
+        throw new Error('Network response was not ok ' + response.statusText);
+    }
+})
+.then(data => {
+    console.log('Success:', data);
+    alert('Datos guardados exitosamente');
+})
+.catch((error) => {
+    console.error('Error:', error);
+    alert('Error al guardar los datos');
+});
         }
 
 
