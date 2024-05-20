@@ -1,6 +1,6 @@
 <?php
 // Permitir el acceso desde cualquier origen (puedes especificar tu dominio de Netlify en lugar de '*')
-header('Access-Control-Allow-Origin: https://lesacecyteh.netlify.app/');
+header('Access-Control-Allow-Origin: https://lesa-tau.vercel.app');
 // Permitir los métodos HTTP
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE, PUT");
 // Permitir los encabezados personalizados
